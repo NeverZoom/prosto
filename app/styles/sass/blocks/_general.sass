@@ -158,8 +158,8 @@ h3.container_title
       margin: 30px auto
 
 .success
-  // display: none
-  display: flex
+  display: none
+  // display: flex
   flex-direction: column
   justify-content: center
   align-items: center
@@ -170,6 +170,7 @@ h3.container_title
   right: 0
   bottom: 0
   gap: 20px
+  z-index: -10
   .title
     font-weight: 700
     font-size: 42px
@@ -186,3 +187,10 @@ h3.container_title
     & ~ *
       opacity: .5
       filter: blur(10px)
+
+.popup
+  display: none
+
+.mfp-content
+  .popup
+    display: block
