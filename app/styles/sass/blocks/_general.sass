@@ -1,0 +1,188 @@
+.link
+  display: inline-block
+  text-decoration: none
+  color: $textcolor
+  font-weight: 700
+  font-size: 18px
+  line-height: 21px
+  padding-left: 10px
+  padding-right: 3px
+  position: relative
+  transition: all 0.3s ease
+  font-family: SFProText
+  text-align: center
+  &:hover
+    color: $textcolor
+  &::before
+    transition: all 0.3s ease
+    content: ''
+    position: absolute
+    left: -5px
+    bottom: -6px
+    // transform: translateY(-5px)
+    width: 10px
+    height: 10px
+    border-radius: 100%
+
+.link.accent
+  border-bottom: 3px solid $accent
+  &::before
+    background: $accent
+  &:hover
+    border-color: $secondary
+    &::before
+      background: $secondary
+
+.link.secondary
+  border-bottom: 3px solid $secondary
+  &::before
+    background: $secondary
+  &:hover
+    border-color: $accent
+    &::before
+      background: $accent
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.justify-content-evenly
+  justify-content: space-evenly !important
+
+.button
+  text-decoration: none
+  display: inline-block
+  padding: 10px 15px
+  min-width: 195px
+  font-weight: 700
+  font-size: 18px
+  line-height: 21px
+  transition: all 0.3s ease
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  border-radius: 10px
+  text-align: center
+
+.button.accent
+  background: $accent
+  color: $secondary
+  &:hover
+    background: $secondary
+    color: $accent
+
+.button.secondary
+  background: $secondary
+  color: white
+  &:hover
+    background: $accent
+    color: $secondary
+
+h3.container_title
+  font-weight: 700
+  font-size: 50px
+  line-height: 60px
+  color: $secondary
+  position: relative
+  display: inline-block
+  &::before
+    content: ''
+    position: absolute
+    right: -10px
+    bottom: 0
+    height: 10px
+    width: 10px
+    border-radius: 100%
+    background: $accent
+  &::after
+    content: ''
+    position: absolute
+    // left: -100%
+    bottom: 4px
+    width: 100vw
+    border-bottom: 1px solid $accent
+  span
+    font-weight: 600
+    display: inline-block
+    font-family: Barista
+    font-size: 50px
+    line-height: 60px
+
+.slick-dots
+  bottom: -40px
+  li
+    button
+      width: 15px
+      height: 15px
+      border-radius: 100%
+      background: #D9D9D9
+      &::before
+        content: ''
+  li.slick-active
+    button
+      background: $accent
+
+.mfp-content
+  background: #FFFFFF
+  border: 2px solid $secondary
+  width: 70% !important
+  margin: 0 auto
+  padding: 50px 0
+  position: relative
+  .title
+    font-weight: 400
+    font-size: 38px
+    line-height: 45px
+    text-align: center
+    color: $secondary
+    margin-bottom: 30px
+  .mfp-close
+    color: $secondary
+  .line
+    height: 1px
+    background: $secondary
+  img
+    width: 50%
+    margin: 0 auto
+    display: block
+    padding: 50px 0
+  form
+    >input
+      font-weight: 400
+      font-size: 18px
+      line-height: 21px
+      margin-bottom: 25px
+      height: 35px
+      border: 1px solid $secondary
+    button
+      display: block
+      margin: 30px auto
+
+.success
+  // display: none
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: absolute
+  text-align: center
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  gap: 20px
+  .title
+    font-weight: 700
+    font-size: 42px
+    line-height: 50px
+    margin: 0 !important
+  p
+    font-weight: 300
+    font-size: 24px
+    line-height: 29px
+    color: $secondary
+  & ~ *
+    transition: all .5s ease
+  &.active
+    & ~ *
+      opacity: .5
+      filter: blur(10px)
