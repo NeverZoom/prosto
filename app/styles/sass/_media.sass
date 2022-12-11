@@ -26,6 +26,8 @@
     .title
       font-size: 40px
       line-height: 50px
+      span
+        font-size: 32px
     .button
       padding: 9px
       min-width: auto
@@ -126,7 +128,9 @@
       left: 50%
       transform: translateX(-50%)
       z-index: 2000
+      max-width: 300px
     form
+      margin-bottom: 110px
       button
         margin: 20px auto
 
@@ -156,12 +160,14 @@
           font-size: 24px
           line-height: 29px
   .slick-slide
-    margin: 0 50px
+    margin: 0 10px
   .serv__wrapper
     margin-top: 0
     .title
-      font-size: 40px
-      line-height: 60px
+      font-size: 30px
+      line-height: 40px
+      span
+        font-size: 28px
     .button
       padding: 10px 15px
       min-width: 195px
@@ -240,11 +246,31 @@
       position: relative
       top: auto
       left: auto
+      max-width: none
       transform: translateX(0%)
     form
+      margin-bottom: 0
       button
         margin: 30px auto
+  .serv__wrapper
+    .block
+      h3
+        &::after
+          width: 110%
 
 +media-breakpoint-up(xl)
+  .slick-slide
+    margin: 0 20px
+  .serv__wrapper
+    .title
+      font-size: 40px
+      span
+        font-size: 32px
+    .block
+      h3
+        &::after
+          width: 120%
 
-@media (min-width: 1920px)
+@media (min-width: 1440px)
+  .slick-slide
+    margin: 0 50px

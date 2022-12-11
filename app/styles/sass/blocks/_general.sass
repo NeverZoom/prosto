@@ -185,9 +185,11 @@ h3.container_title
   & ~ *
     transition: all .5s ease
   &.active
+    z-index: 100
     & ~ *
       opacity: .5
       filter: blur(10px)
+      background: rgba(#fff, 0.7)
 
 .popup
   display: none

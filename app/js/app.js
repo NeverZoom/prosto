@@ -68,6 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		$('.menu').removeClass('active');
 	});
 
+	$('.menu a').on('click', () => {
+		$('.menu').removeClass('active');
+	});
+
 	$('.popup-form').magnificPopup({
 		type: 'inline',
 		preloader: false,
