@@ -216,12 +216,16 @@
 					<p>скоро мы с Вами свяжемся.</p>
 				</div>
         <form action="" class="contactform">
-          <input type="text" required placeholder="ФИО">
-          <input type="text" required placeholder="+7 (...">
-          <textarea placeholder="Комментарий к заявке"></textarea>
+          <input type="text" required placeholder="ФИО" name="fio">
+          <input type="text" required placeholder="+7 (..." name="tel">
+          <textarea placeholder="Комментарий к заявке" name="text"></textarea>
           <label><input type="checkbox" required> Согласие на обработку персональных данных</label>
           <button class="d-none d-lg-block link secondary">Оставить заявку</button>
           <button class="d-block d-lg-none button accent">Оставить заявку</button>
+
+          <input type="hidden" value="название проекта" name="project_name">
+          <input type="hidden" value="почта администратора" name="admin_email">
+          <input type="hidden" value="тема письма" name="form_subject">
         </form>
       </div>
       <div class="col-lg-6 d-none d-lg-flex partners justify-content-center align-items-center flex-column">
@@ -335,11 +339,15 @@
 				</div>
 				<div class="title">Тестовый период</div>
 				<form action="" class="popupform">
-					<input type="text" required placeholder="ФИО">
-					<input type="text" required placeholder="+7 (...">
-					<input placeholder="Комментарий к заказу">
+					<input type="text" required placeholder="ФИО" name="fio">
+					<input type="text" required placeholder="+7 (..." name="tel">
+					<input placeholder="Комментарий к заказу" name="text">
 					<label><input type="checkbox" required> Согласие на обработку персональных данных</label>
 					<button class="button accent">Оставить заявку</button>
+
+          <input type="hidden" value="название проекта" name="project_name">
+          <input type="hidden" value="почта администратора" name="admin_email">
+          <input type="hidden" value="тема письма" name="form_subject">
 				</form>
 			</div>
 		</div>
